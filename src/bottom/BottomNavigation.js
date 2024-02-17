@@ -1,59 +1,89 @@
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, Image } from "react-native";
 import React from "react";
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import Screen1 from "./Screen1";
-import Screen2 from "./Screen2";
-import Screen3 from "./Screen3";
-import { AntDesign } from "@expo/vector-icons";
+import { TouchableOpacity } from "react-native-gesture-handler";
 
-const Bottom = createBottomTabNavigator();
 export default function BottomNavigation() {
   return (
-    <Bottom.Navigator
-      screenOptions={{
-        tabBarStyle: {
-          position: "absolute",
-          //   bottom: 20,
-          borderRadius: 10,
-          margin: 10,
-          //   padding: 10,
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-        },
+    <View
+      style={{
+        width: "100%",
+        height: 70,
+        flexDirection: "row",
+        justifyContent: "space-evenly",
+        alignItems: "center",
+        position: "absolute",
+        bottom: 20,
       }}
     >
-      <Bottom.Screen
-        name="screen1"
-        component={Screen1}
-        options={{
-          headerShown: false,
-          tabBarIcon: () => {
-            return <AntDesign name="menufold" size={24} color="black" />;
-          },
+      <TouchableOpacity
+        style={{
+          width: "20%",
+          height: "100%",
+          justifyContent: "center",
+          alignItems: "center",
         }}
-      ></Bottom.Screen>
-      <Bottom.Screen
-        name="screen2"
-        component={Screen2}
-        options={{
-          headerShown: false,
-          tabBarIcon: () => {
-            return <AntDesign name="eyeo" size={24} color="black" />;
-          },
+        onPress={() => {
+          navigation.navigate("Logout");
         }}
-      ></Bottom.Screen>
-      <Bottom.Screen
-        name="screen3"
-        component={Screen3}
-        options={{
-          headerShown: false,
-          tabBarIcon: () => {
-            return <AntDesign name="home" size={24} color="black" />;
-          },
+      >
+        <Image
+          source={require("../../assets/logo.jpeg")}
+          style={{ width: 30, height: 30 }}
+        ></Image>
+      </TouchableOpacity>
+      <TouchableOpacity
+        style={{
+          width: "20%",
+          height: "100%",
+          justifyContent: "center",
+          alignItems: "center",
         }}
-      ></Bottom.Screen>
-    </Bottom.Navigator>
+      >
+        <Image
+          source={require("../../assets/logo.jpeg")}
+          style={{ width: 30, height: 30 }}
+        ></Image>
+      </TouchableOpacity>
+      <TouchableOpacity
+        style={{
+          width: "20%",
+          height: "100%",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <Image
+          source={require("../../assets/logo.jpeg")}
+          style={{ width: 30, height: 30 }}
+        ></Image>
+      </TouchableOpacity>
+      <TouchableOpacity
+        style={{
+          width: "20%",
+          height: "100%",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <Image
+          source={require("../../assets/logo.jpeg")}
+          style={{ width: 30, height: 30 }}
+        ></Image>
+      </TouchableOpacity>
+      <TouchableOpacity
+        style={{
+          width: "20%",
+          height: "100%",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <Image
+          source={require("../../assets/logo.jpeg")}
+          style={{ width: 30, height: 30 }}
+        ></Image>
+      </TouchableOpacity>
+    </View>
   );
 }
 

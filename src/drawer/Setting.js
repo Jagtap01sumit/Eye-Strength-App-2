@@ -1,7 +1,9 @@
-import { StyleSheet, Text, View, Image } from "react-native";
+import { StyleSheet, Text, View, Image, Pressable } from "react-native";
 import React from "react";
+import { useNavigation } from "@react-navigation/native";
 
 export default function Setting() {
+  const navigation = useNavigation();
   return (
     <View
       style={{
@@ -182,16 +184,22 @@ export default function Setting() {
             marginBottom: 12,
           }}
         >
-          <Text
-            style={{
-              color: "white",
-              fontSize: 20,
-              fontWeight: "bold",
-              paddingLeft: 12,
+          <Pressable
+            onPress={() => {
+              navigation.navigate("Logout");
             }}
           >
-            Log Out
-          </Text>
+            <Text
+              style={{
+                color: "white",
+                fontSize: 20,
+                fontWeight: "bold",
+                paddingLeft: 12,
+              }}
+            >
+              Log Out
+            </Text>
+          </Pressable>
         </View>
       </View>
     </View>
