@@ -1,10 +1,10 @@
 import { StyleSheet, Text, View } from "react-native";
 import React from "react";
 
-export default function EyeStrenth() {
+export default function CustomBottom() {
   return (
-    <View>
-      <Text>EyeStrenth</Text>
+    <View style={{ backgroundColor: "blue", flex: 1, bottom: 20 }}>
+      <Text>CustomBottom</Text>
     </View>
   );
 }

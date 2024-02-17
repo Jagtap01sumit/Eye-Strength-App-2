@@ -1,13 +1,10 @@
 import { StyleSheet, Text, View } from "react-native";
 import React from "react";
-import BottomNavigation from "../bottom/BottomNavigation";
 
-
-
-export default function Main() {
+export default function Screen1() {
   return (
-    <View style={{ flex: 1 }}>
-      <BottomNavigation />
+    <View>
+      <Text>Screen1</Text>
     </View>
   );
 }

@@ -5,17 +5,12 @@ import {
   GestureHandlerRootView,
   FlatList,
 } from "react-native-gesture-handler";
-// import Screen1 from "../bottom/Screen1";
+import Screen1 from "../bottom/Screen1";
 import Main from "./Main";
 import Main2 from "./Main2";
 import Setting from "./Setting";
-import { useNavigation } from "@react-navigation/native";
-import BottomNavigation from "../bottom/BottomNavigation";
-import Logout from "./Logout";
-import EyeStrenth from "../bottom/EyeStrenth";
 
 export default function CustomDrawer() {
-  const navigation = useNavigation();
   const menu = [
     { icon: require("../../assets/logo.jpeg"), title: "home" },
     { icon: require("../../assets/logo.jpeg"), title: "Eye Strength" },
@@ -146,13 +141,89 @@ export default function CustomDrawer() {
           </Text>
         </View>
         <View>
-          {selectedMenuItem === 0 && <CustomDrawer />}
+          {selectedMenuItem === 0 && <Screen1 />}
           {selectedMenuItem === 1 && <Main />}
           {selectedMenuItem === 2 && <Main2 />}
           {selectedMenuItem === 3 && <Setting />}
           {selectedMenuItem === 4 && <Screen3 />}
         </View>
-        <BottomNavigation />
+        <View
+          style={{
+            width: "100%",
+            height: 70,
+            flexDirection: "row",
+            justifyContent: "space-evenly",
+            alignItems: "center",
+            position: "absolute",
+            bottom: 20,
+          }}
+        >
+          <TouchableOpacity
+            style={{
+              width: "20%",
+              height: "100%",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <Image
+              source={require("../../assets/logo.jpeg")}
+              style={{ width: 30, height: 30 }}
+            ></Image>
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={{
+              width: "20%",
+              height: "100%",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <Image
+              source={require("../../assets/logo.jpeg")}
+              style={{ width: 30, height: 30 }}
+            ></Image>
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={{
+              width: "20%",
+              height: "100%",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <Image
+              source={require("../../assets/logo.jpeg")}
+              style={{ width: 30, height: 30 }}
+            ></Image>
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={{
+              width: "20%",
+              height: "100%",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <Image
+              source={require("../../assets/logo.jpeg")}
+              style={{ width: 30, height: 30 }}
+            ></Image>
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={{
+              width: "20%",
+              height: "100%",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <Image
+              source={require("../../assets/logo.jpeg")}
+              style={{ width: 30, height: 30 }}
+            ></Image>
+          </TouchableOpacity>
+        </View>
       </Animated.View>
     </GestureHandlerRootView>
   );

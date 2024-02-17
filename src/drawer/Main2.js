@@ -31,7 +31,7 @@ export default function Main2() {
       <Text>Main2</Text>
       <Text>Main2</Text>
       <Text>Main2</Text>
-      {/* <BottomNavigation /> */}
+      <BottomNavigation />
     </View>
   );
 }
